@@ -1,0 +1,138 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFD94D;
+}
+
+.pantalla-completa {
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 8px solid #D9B312;
+}
+
+.header {
+  background-color: #3D4963;
+  border-radius: 20px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.titulo {
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.pantalla {
+  background-color: black;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PTexto {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.grid-contenedor {
+  display: grid;
+  grid-template-columns: 90px repeat(6, 1fr) 100px repeat(7, 1fr);
+  row-gap: 10px;
+  column-gap: 4px;
+  text-align: center;
+  margin-top: 40px;
+  position: relative; 
+  z-index: 1;
+}
+.grid-contenedor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(70px + 6 * (100% - 70px - 60px) / 13); 
+  width: 90px; 
+  background-color: #d4d4d4;
+  z-index: 0;
+}
+.celda {
+  background-color: #FFD94D;
+  border: 1px solid #D9B312;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  justify-self: center;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+
+.celda:hover{
+  background-color: #1B2340;
+  border: 1px solid #1B2340;
+  color: #EEAC2B;
+}
+
+.encabezado {
+  background-color: #3D4963;
+  color: white;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pasillo {
+  background-color: transparent;
+  border: none;
+}
+
+.celda-ocupada {
+  background-color: #EEAC2B;
+  border: 1px solid #EEAC2B;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  justify-self: center;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  color:white;
+  
+}
+
+.celda-sugerida{
+  background-color: #1B2340;
+  border: 1px solid #1B2340;
+  color: #EEAC2B;
+}
+.footer {
+  background-color: #3D4963;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 40px;
+}
+.input-reserva {
+  width: 7.5%;
+  max-width: 400px;
+}
+
+.small-label {
+  font-size: 1.2rem;  
+  margin-bottom: 10px;
+}
